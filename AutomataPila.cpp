@@ -13,7 +13,7 @@ struct nodo{
 typedef struct nodo *pila;
  
 /*---------------Funcion para Apilar un Caracter--------*/
-void apila(pila &p,const char a){
+void apilar(pila &p,const char a){
  
     pila q=new (struct nodo) ;
     q->a=a;
@@ -22,7 +22,7 @@ void apila(pila &p,const char a){
  }
  
 /*------------- Funcion para Desapilar un elemento -----*/
-void desapila(pila &p){
+void desapilar(pila &p){
  
     int n=p->a;
  
@@ -37,7 +37,7 @@ int recorrer(int e,char letra, pila &p){
     const char a='x';
  
     if(e==0&&letra=='a'){
-        apila(p,a);
+        apilar(p,a);
         return 0;
         }
  
@@ -47,7 +47,7 @@ int recorrer(int e,char letra, pila &p){
         }
  
         if(e==1&&letra=='b'){
-            desapila(p);
+            desapilar(p);
             return 1;
         }
  
